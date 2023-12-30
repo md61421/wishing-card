@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Gochi Hand", cursive;
+}
+
+body {
+  background: #222;
+}
+
+main {
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 54px;
+  animation: textAnimation 1s infinite alternate-reverse;
+}
+
+#boxContainer {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  transform-origin: left top;
+  animation: box 5s ease-in-out -2s infinite;
+}
+
+.box:nth-child(1) {
+  left: 10%;
+  animation-delay: 0;
+  background-color: #fc0120;
+}
+
+.box:nth-child(2) {
+  left: 20%;
+  animation-delay: -5s;
+  background-color: #8257e6;
+}
+
+.box:nth-child(3) {
+  left: 30%;
+  animation-delay: -3s;
+  background-color: #ffbf4d;
+}
+
+.box:nth-child(4) {
+  left: 40%;
+  animation-delay: -2.5s;
+  background-color: #fe5d7a;
+}
+
+.box:nth-child(5) {
+  left: 50%;
+  animation-delay: -4s;
+  background-color: #45ec9c;
+}
+
+.box:nth-child(6) {
+  left: 60%;
+  animation-delay: -6s;
+  background-color: #f6e327;
+}
+
+.box:nth-child(7) {
+  left: 70%;
+  animation-delay: -1.5s;
+  background-color: #f769ce;
+}
+
+.box:nth-child(8) {
+  left: 80%;
+  animation-delay: -2s;
+  background-color: #007de7;
+}
+
+.box:nth-child(9) {
+  left: 90%;
+  animation-delay: -3.5s;
+  background-color: #63b4fc;
+}
+
+.box:nth-child(10) {
+  left: 100%;
+  animation-delay: -2.5s;
+  background-color: #f9c4ea;
+}
+
+@keyframes box {
+  0% {
+    transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+  }
+  25% {
+    transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+  }
+  50% {
+    transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+  }
+  75% {
+    transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+  }
+  100% {
+    transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+.parentInfo {
+  position: absolute;
+  top: 90%;
+  font-size: 1.5em;
+}
+
+.info-socials {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.container {
+  background-color: gainsboro;
+  position: absolute;
+  top: 0;
+  height: 100svh;
+  padding: 25svh 20svw;
+  color: hsl(198, 1%, 29%);
+  font-family: "Gochi Hand", cursive;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.text {
+  color: #222;
+  line-height: 1.5;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 50%,
+    #ffe97f 50%,
+    #ffe14c 85%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s
+    forwards;
+}
+
+.btn {
+  position: fixed;
+  color: #222;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  animation: textAnimation 1s infinite alternate-reverse;
+}
+
+@keyframes animatedBackground {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes slider {
+  to {
+    top: -100%;
+  }
+}
+
+@keyframes textAnimation {
+  to {
+    text-shadow: 0px 0px 10px #1b9aaa;
+  }
+}
